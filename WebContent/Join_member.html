@@ -1,15 +1,16 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
 <html>
 <head>
-<title>È¸¿ø°¡ÀÔÃ¢</title>
+<title>íšŒì›ê°€ì…ì°½</title>
 </head>
   <link rel="stylesheet" href="Web.css">
   <script src="Join_member.js" type="text/javascript"></script>
 <body>
 <script type="text/javascript">
     
-    var re = /^[a-zA-Z0-9]{4,12}$/ // ¾ÆÀÌµğ¿Í ÆĞ½º¿öµå°¡ ÀûÇÕÇÑÁö °Ë»çÇÒ Á¤±Ô½Ä
-    var re2 = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i; // ÀÌ¸ŞÀÏÀÌ ÀûÇÕÇÑÁö °Ë»çÇÒ Á¤±Ô½Ä
+    var re = /^[a-zA-Z0-9]{4,12}$/ // ì•„ì´ë””ì™€ íŒ¨ìŠ¤ì›Œë“œê°€ ì í•©í•œì§€ ê²€ì‚¬í•  ì •ê·œì‹
+    var re2 = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i; // ì´ë©”ì¼ì´ ì í•©í•œì§€ ê²€ì‚¬í•  ì •ê·œì‹
 
        function check(re, what, message) {
        if(re.test(what.value)) {
@@ -20,33 +21,33 @@
        return false;
        };
 
-        if(!check(re,id,"¾ÆÀÌµğ´Â 4~12ÀÚÀÇ ¿µ¹® ´ë¼Ò¹®ÀÚ¿Í ¼ıÀÚ·Î¸¸ ÀÔ·Â")){
+        if(!check(re,id,"ì•„ì´ë””ëŠ” 4~12ìì˜ ì˜ë¬¸ ëŒ€ì†Œë¬¸ìì™€ ìˆ«ìë¡œë§Œ ì…ë ¥")){
          return false;
        }
    
-        if(!check(re,pw,"ÆĞ½º¿öµå´Â 4~12ÀÚÀÇ ¿µ¹® ´ë¼Ò¹®ÀÚ¿Í ¼ıÀÚ·Î¸¸ ÀÔ·Â") {
+        if(!check(re,pw,"íŒ¨ìŠ¤ì›Œë“œëŠ” 4~12ìì˜ ì˜ë¬¸ ëŒ€ì†Œë¬¸ìì™€ ìˆ«ìë¡œë§Œ ì…ë ¥") {
            return false;
        }
 
        if(join.pw.value != join.checkpw.value) {
-           alert("ºñ¹Ğ¹øÈ£°¡ ´Ù¸¨´Ï´Ù. ´Ù½Ã È®ÀÎÇØ ÁÖ¼¼¿ä.");
+           alert("ë¹„ë°€ë²ˆí˜¸ê°€ ë‹¤ë¦…ë‹ˆë‹¤. ë‹¤ì‹œ í™•ì¸í•´ ì£¼ì„¸ìš”.");
            join.checkpw.value = "";
            join.checkpw.focus();
            return false;
        }
 
        if(email.value=="") {
-           alert("ÀÌ¸ŞÀÏÀ» ÀÔ·ÂÇØ ÁÖ¼¼¿ä");
+           alert("ì´ë©”ì¼ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”");
            email.focus();
            return false;
        }
 
-       if(!check(re2, email, "ÀûÇÕÇÏÁö ¾ÊÀº ÀÌ¸ŞÀÏ Çü½ÄÀÔ´Ï´Ù.")) {
+       if(!check(re2, email, "ì í•©í•˜ì§€ ì•Šì€ ì´ë©”ì¼ í˜•ì‹ì…ë‹ˆë‹¤.")) {
            return false;
        }
 
        if(join.name.value=="") {
-           alert("ÀÌ¸§À» ÀÔ·ÂÇØ ÁÖ¼¼¿ä");
+           alert("ì´ë¦„ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”");
            join.name.focus();
            return false;
        }
@@ -70,29 +71,29 @@
         var check =true;
         
          if(id.value.length==0){
-            alert('¾ÆÀÌµğ °ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.');
+            alert('ì•„ì´ë”” ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.');
             return false;
             check = false; 
           }
         if(pw.value.length<8){
-            alert('ºñ¹Ğ¹øÈ£ 8ÀÚ ÀÌ»ó');
+            alert('ë¹„ë°€ë²ˆí˜¸ 8ì ì´ìƒ');
             return false;
             check = false;
         }  
         if(pw.value!==repw.value){
-            alert('ÆĞ½º¿öµå°¡ ¸ÂÁö ¾Ê½À´Ï´Ù.');
+            alert('íŒ¨ìŠ¤ì›Œë“œê°€ ë§ì§€ ì•ŠìŠµë‹ˆë‹¤.');
             return false;
             check = false;
         }
         if(check){
              alert(`
-            -¾ÆÀÌµğ : ${id.value} 
-            -ºñ¹Ğ¹øÈ£: ${pw.value} 
-            -ÀÌ¸§: ${name.value} 
-            -»ı³â¿ùÀÏ(${year.value}/${month.value}/${day.value})  
-            -¼ºº°: ${sex.value} 
-            -ÀÌ¸ŞÀÏ: ${email.value} 
-            -ÈŞ´ëÀüÈ­(${nNum.value}/ ${phoneNum.value} )
+            -ì•„ì´ë”” : ${id.value} 
+            -ë¹„ë°€ë²ˆí˜¸: ${pw.value} 
+            -ì´ë¦„: ${name.value} 
+            -ìƒë…„ì›”ì¼(${year.value}/${month.value}/${day.value})  
+            -ì„±ë³„: ${sex.value} 
+            -ì´ë©”ì¼: ${email.value} 
+            -íœ´ëŒ€ì „í™”(${nNum.value}/ ${phoneNum.value} )
             `);
         }
         return false;
@@ -113,12 +114,12 @@
     <div id="container" role="main">
         <div id="content">
             <!-- tg-text=title -->
-            <h3 class="blind">³×ÀÌ¹ö È¸¿ø°¡ÀÔ</h3>
+            <h3 class="blind">ë„¤ì´ë²„ íšŒì›ê°€ì…</h3>
             <div class="join_content">
-                <!-- ¾ÆÀÌµğ, ºñ¹Ğ¹øÈ£ ÀÔ·Â -->
+                <!-- ì•„ì´ë””, ë¹„ë°€ë²ˆí˜¸ ì…ë ¥ -->
                 <div class="row_group">
                     <div class="join_row">
-                        <h3 class="join_title"><label for="id">¾ÆÀÌµğ</label></h3>
+                        <h3 class="join_title"><label for="id">ì•„ì´ë””</label></h3>
                         <span class="ps_box int_id">
 							<input type="text" id="id" name="id" class="int" title="ID" maxlength="20">
                             <span class="step_url">@naver.com</span></span>
@@ -126,50 +127,50 @@
                     </div>
 
                     <div class="join_row">
-                        <h3 class="join_title"><label for="pswd1">ºñ¹Ğ¹øÈ£</label></h3>
+                        <h3 class="join_title"><label for="pswd1">ë¹„ë°€ë²ˆí˜¸</label></h3>
                         <span class="ps_box int_pass" id="pswd1Img">
-							<input type="password" id="pswd1" name="pswd1" class="int" title="ºñ¹Ğ¹øÈ£ ÀÔ·Â" aria-describedby="pswd1Msg" maxlength="20">
+							<input type="password" id="pswd1" name="pswd1" class="int" title="ë¹„ë°€ë²ˆí˜¸ ì…ë ¥" aria-describedby="pswd1Msg" maxlength="20">
                             <span class="lbl"><span id="pswd1Span" class="step_txt"></span></span>
 						</span>
-                        <span class="error_next_box" id="pswd1Msg" style="display:none" role="alert">5~12ÀÚÀÇ ¿µ¹® ¼Ò¹®ÀÚ, ¼ıÀÚ¿Í Æ¯¼ö±âÈ£(_)¸¸ »ç¿ë °¡´ÉÇÕ´Ï´Ù.</span>
+                        <span class="error_next_box" id="pswd1Msg" style="display:none" role="alert">5~12ìì˜ ì˜ë¬¸ ì†Œë¬¸ì, ìˆ«ìì™€ íŠ¹ìˆ˜ê¸°í˜¸(_)ë§Œ ì‚¬ìš© ê°€ëŠ¥í•©ë‹ˆë‹¤.</span>
 
-                        <h3 class="join_title"><label for="pswd2">ºñ¹Ğ¹øÈ£ ÀçÈ®ÀÎ</label></h3>
+                        <h3 class="join_title"><label for="pswd2">ë¹„ë°€ë²ˆí˜¸ ì¬í™•ì¸</label></h3>
                         <span class="ps_box int_pass_check" id="pswd2Img">
-							<input type="password" id="pswd2" name="pswd2" class="int" title="ºñ¹Ğ¹øÈ£ ÀçÈ®ÀÎ ÀÔ·Â" aria-describedby="pswd2Blind" maxlength="20">
+							<input type="password" id="pswd2" name="pswd2" class="int" title="ë¹„ë°€ë²ˆí˜¸ ì¬í™•ì¸ ì…ë ¥" aria-describedby="pswd2Blind" maxlength="20">
 							<span id="pswd2Blind" class="wa_blind"></span>
 						</span>
                         <span class="error_next_box" id="pswd2Msg" style="display:none" role="alert"></span>
                     </div>
                 </div>
-                <!-- // ¾ÆÀÌµğ, ºñ¹Ğ¹øÈ£ ÀÔ·Â -->
+                <!-- // ì•„ì´ë””, ë¹„ë°€ë²ˆí˜¸ ì…ë ¥ -->
                 
                 
                 
-                 <!-- ÀÌ¸§, »ı³â¿ùÀÏ ÀÔ·Â -->
+                 <!-- ì´ë¦„, ìƒë…„ì›”ì¼ ì…ë ¥ -->
                 <div class="row_group">
 
                     <!-- lang = ko_KR -->
                     <div class="join_row">
-                        <h3 class="join_title"><label for="name">ÀÌ¸§</label></h3>
+                        <h3 class="join_title"><label for="name">ì´ë¦„</label></h3>
                         <span class="ps_box box_right_space">
-							<input type="text" id="name" name="name" title="ÀÌ¸§" class="int" maxlength="40">
+							<input type="text" id="name" name="name" title="ì´ë¦„" class="int" maxlength="40">
 						</span>
                         <span class="error_next_box" id="nameMsg" style="display:none" role="alert"></span>
                     </div>
                     <!-- lang = ko_KR -->
 
                     <div class="join_row join_birthday">
-                        <h3 class="join_title"><label for="yy">»ı³â¿ùÀÏ</label></h3>
+                        <h3 class="join_title"><label for="yy">ìƒë…„ì›”ì¼</label></h3>
                         <div class="bir_wrap">
                             <div class="bir_yy">
 								<span class="ps_box">
-									<input type="text" id="yy" placeholder="³â(4ÀÚ)" aria-label="³â(4ÀÚ)" class="int" maxlength="4">
+									<input type="text" id="yy" placeholder="ë…„(4ì)" aria-label="ë…„(4ì)" class="int" maxlength="4">
 								</span>
                             </div>
                             <div class="bir_mm">
 								<span class="ps_box">
-									<select id="mm" class="sel" aria-label="¿ù">
-										<option>¿ù</option>
+									<select id="mm" class="sel" aria-label="ì›”">
+										<option>ì›”</option>
 										  	 			<option value="01">
                                                             1
                                                         </option>
@@ -211,7 +212,7 @@
                             </div>
                             <div class=" bir_dd">
 								<span class="ps_box">
-									<input type="text" id="dd" placeholder="ÀÏ" aria-label="ÀÏ" class="int" maxlength="2">
+									<input type="text" id="dd" placeholder="ì¼" aria-label="ì¼" class="int" maxlength="2">
 									<label for="dd" class="lbl"></label>
 								</span>
                             </div>
@@ -220,65 +221,65 @@
                     </div>
 
                     <div class="join_row join_sex">
-                        <h3 class="join_title"><label for="gender">¼ºº°</label></h3>
+                        <h3 class="join_title"><label for="gender">ì„±ë³„</label></h3>
                         <div class="ps_box gender_code">
-                            <select id="gender" name="gender" class="sel" aria-label="¼ºº°">
-                                <option value="" selected>¼ºº°</option>
-                                <option value="0">³²ÀÚ</option>
-                                <option value="1">¿©ÀÚ</option>
+                            <select id="gender" name="gender" class="sel" aria-label="ì„±ë³„">
+                                <option value="" selected>ì„±ë³„</option>
+                                <option value="0">ë‚¨ì</option>
+                                <option value="1">ì—¬ì</option>
                             </select>
                         </div>
                     </div>
                     <span class="error_next_box" id="genderMsg" style="display:none" role="alert"></span>
 
                     <div class="join_row join_email">
-                        <h3 class="join_title"><label for="email">º»ÀÎ È®ÀÎ ÀÌ¸ŞÀÏ<span class="terms_choice">(¼±ÅÃ)</span></label></h3>
+                        <h3 class="join_title"><label for="email">ë³¸ì¸ í™•ì¸ ì´ë©”ì¼<span class="terms_choice">(ì„ íƒ)</span></label></h3>
                         <span class="ps_box int_email box_right_space">
-							<input type="text" id="email" name="email" maxlength="100" placeholder="¼±ÅÃÀÔ·Â" aria-label="¼±ÅÃÀÔ·Â" class="int" maxlength="100">
+							<input type="text" id="email" name="email" maxlength="100" placeholder="ì„ íƒì…ë ¥" aria-label="ì„ íƒì…ë ¥" class="int" maxlength="100">
 						</span>
                     </div>
                     <span class="error_next_box" id="emailMsg" style="display:none" role="alert"></span>
                 </div>
-                <!-- // ÀÌ¸§, »ı³â¿ùÀÏ ÀÔ·Â -->
+                <!-- // ì´ë¦„, ìƒë…„ì›”ì¼ ì…ë ¥ -->
 
-                <!-- ÈŞ´ëÀüÈ­ ¹øÈ£, ÀÎÁõ¹øÈ£ ÀÔ·Â -->
+                <!-- íœ´ëŒ€ì „í™” ë²ˆí˜¸, ì¸ì¦ë²ˆí˜¸ ì…ë ¥ -->
                 <div class="join_row join_mobile" id="mobDiv">
-                    <h3 class="join_title"><label for="phoneNo">ÈŞ´ëÀüÈ­</label></h3>
+                    <h3 class="join_title"><label for="phoneNo">íœ´ëŒ€ì „í™”</label></h3>
                     <div class="ps_box country_code">
-                        <select id="nationNo" name="nationNo" class="sel" aria-label="ÀüÈ­¹øÈ£ ÀÔ·Â">
+                        <select id="nationNo" name="nationNo" class="sel" aria-label="ì „í™”ë²ˆí˜¸ ì…ë ¥">
                 
                                         <option value="82" selected>
-                                            ´ëÇÑ¹Î±¹ +82
+                                            ëŒ€í•œë¯¼êµ­ +82
                                         </option>
                                         <option value="45" >
-                                            µ§¸¶Å© +45
+                                            ë´ë§ˆí¬ +45
                                         </option>
                 
                                         <option value="61" >
-                                            È£ÁÖ +61
+                                            í˜¸ì£¼ +61
                                         </option>
                                         <option value="852" >
-                                            È«Äá +852
+                                            í™ì½© +852
                                         </option>
                         </select>
                     </div>
                     
-                <!-- // ÈŞ´ëÀüÈ­ ¹øÈ£, ÀÎÁõ¹øÈ£ ÀÔ·Â -->
+                <!-- // íœ´ëŒ€ì „í™” ë²ˆí˜¸, ì¸ì¦ë²ˆí˜¸ ì…ë ¥ -->
 
                                        <div class="join_row join_mobile">
                             <div class="int_mobile_area">
                                 <span class="ps_box int_mobile">
-                                    <input type="tel" id="iphoneNo" name="iphoneNo" placeholder="ÀüÈ­¹øÈ£ ÀÔ·Â" aria-label="ÀüÈ­¹øÈ£ ÀÔ·Â" class="int" maxlength="16">
+                                    <input type="tel" id="iphoneNo" name="iphoneNo" placeholder="ì „í™”ë²ˆí˜¸ ì…ë ¥" aria-label="ì „í™”ë²ˆí˜¸ ì…ë ¥" class="int" maxlength="16">
                                 </span>
                                 <a href="#" class="btn_verify btn_primary" id="btnIpinSend" role="button">
-                                    <span class="">ÀÎÁõ¹øÈ£ ¹Ş±â</span>
+                                    <span class="">ì¸ì¦ë²ˆí˜¸ ë°›ê¸°</span>
                                 </a>
                             </div>
                         
                     </div>
                 </div>
                 <div class="submitJoin_area">
-                    <input type="submit" value="°¡ÀÔÇÏ±â" id="submitJoin" class="submit_type submit_primary">
+                    <input type="submit" value="ê°€ì…í•˜ê¸°" id="submitJoin" class="submit_type submit_primary">
                 </div>
             </div>
         </div>
