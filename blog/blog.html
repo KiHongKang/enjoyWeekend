@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <script src="blog.js"></script>
+</head>
+
+ <link rel="shortcut icon" href="img\favicon.png">
+<link rel="stylesheet" href="blogStyle.css">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding|Work+Sans" rel="stylesheet">
+<body>
+  <div id="container">
+    <div id="header">
+        <h1>블로그 제목 </h1>
+         <p id="datepickerPtag">Date: <input type="text" id="datepicker"></p>
+    </div> <!-- header close -->
+    <div id="clearfloat"></div>
+    <div id="menu">
+      <div class="blogMenu">
+    <ul>
+        <li class="menuCover"><a href="[##_blog_link_##]cover">표지</a></li>
+        <li class="menuNotice"><a href="[##_blog_link_##]notice">공지사항</a></li>
+        <li class="menuLocal"><a href="[##_localog_link_##]">위치로그</a> </li>
+        <li class="menuTag" ><a href="[##_taglog_link_##]">태그</a></li>
+        <li class="menuKeyword"><a href="[##_blog_link_##]keylog">키워드</a> </li>
+        <li class="menuGuestbook" ><a href="[##_guestbook_link_##]">방명록</a></li>
+    </ul>
+</div>
+    </div> <!-- menu close -->
+
+    <div id="body">
+        <div id="content">
+            <div class="coverPage"><!-- 커버페이지 -->
+                      <h3>Cover</h3>
+                      <div class="box">
+                          <table>
+                              <tr align=center>
+                                <td>제목</td>
+                                <td>Sky</td>
+                              </tr>
+                              <tr>
+                                <td><img src="img\resize.jpg" alt="박스사진"></td>
+                                <td><img src="img\resize2.jpg" alt="박스사진"></td>
+                              </tr>
+                              <tr align=center>
+                                  <td>내용</td>
+                                  <td>밤하늘 또는 야천(夜天)은 <br/>밤에 보이는 하늘을 이르는 말이다.                                  </td>
+                              </tr>
+                          </table>
+                      </div>
+              </div>
+         </div>
+         <div id="clear"></div>
+            <!-- <div class="searchList">검색 결과 리스트 </div>
+            <div class="searchRplist">검색 결과 댓글 리스트 </div>
+            <div class="searchTblist">검색 결과 트랙백 리스트 </div>
+            <div class="localog">위치 로그 </div>
+            <div class="taglog">태그 클라우드 </div>
+            <div class="keyword">키워드 페이지</div>
+            <div class="keylog">키워드 설명 페이지</div>
+            <div class="guestbook">방명록
+                <div class="writeForm">방명록 글쓰기 </div>
+                <div class="commentList">방명록 리스트 </div>
+            </div>-->
+            <!-- guestbook close -->
+            <!-- <div class="pageError">에러 페이지</div>
+            <div class="entryNotice">공지사항 글 </div>
+            <div class="entryProtected">보호 글 </div>
+            <div class="entryPost">글
+                <div class="titleWrap">글 제목 | 카테고리 | 작성일 | 작성자 | 글 관리 </div>
+                <div class="article">글</div>
+                <div class="tagTrail">글 관련 태그 </div>
+                <div class="communication">트랙백 | 댓글 </div>
+                <div class="trackback">트랙백 </div>
+                <div class="trackbackAdd">트랙백 주소 </div>
+                <div class="trackbackList">트랙백 리스트</div>
+                <div class="comment">댓글
+                    <div class="commentList">댓글 리스트 </div>
+                    <div class="commentWrite">댓글 쓰기 </div>
+                </div>
+            </div>
+            <div class="paging">페이지</div>-->
+            <!-- entryPost close -->
+        </div><!-- content close -->
+
+        <div id="sidebar">
+          <s_sidebar_element>
+             <div class="blogImage"><!--블로그 이미지 -->
+                  <!-- 블로그 이미지 모듈 -->
+                  <div class="blogImageInner">
+                    <div class="box"><img src="img\blogImage_maksym-ivashchenko-1187081_resize.jpg" alt="블로그 이미지" />
+                    </div>
+                  </div>
+              </s_sidebar_element>
+            </div>
+          </div>
+            <div class="blogDesc">블로그 설명 </div>
+
+        <!-- 토글러 기능 -->
+        <div class="toggler">
+          <div id="toggleeffect" class="ui-widget-content ui-corner-all">
+            <h3 class="ui-widget-header ui-corner-all">Animate</h3>
+            <p>
+              Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede. Nulla lorem metus, adipiscing ut, luctus sed, hendrerit vitae, mi.
+            </p>
+          </div>
+        </div>
+         
+        <button id="togglebutton" class="ui-state-default ui-corner-all">Toggle Effect</button>
+        <!-- 토글러 기능 close -->
+
+
+            <!-- <div class="notice">공지사항 리스트 </div>
+            <div class="category">카테고리</div>
+            <div class="tagbox">태그 박스 </div>
+            <div class="author">저자 </div>
+            <div class="recentPost">최글 글 </div>
+            <div class="recentComment">최근에 올라온 댓글 </div>
+            <div class="recentTrackback">최근에 받은 트랙백 </div>
+            <div class="archive">글 보관함 </div>
+            <div class="link">링크</div>
+            <div class="calendar">달력</div>
+            <div class="counter">방문자 수</div>
+            <div class="bannerRss">구독하기 버튼 </div>
+            <div class="bannerTextcube">텍스트큐브 로고 </div> -->
+        </div><!-- sidebar close -->
+
+    </div><!-- body close -->
+
+    <div id="footer">
+        <div class="footMenu">블로그메뉴 </div>
+        <div class="copyright">copyright</div>
+    </div><!-- footer close -->
+</div> <!-- container close -->
+
+
+
+
+
+
+</body>
+</html>

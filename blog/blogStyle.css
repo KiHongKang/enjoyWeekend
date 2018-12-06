@@ -1,0 +1,118 @@
+a{
+  text-decoration: none;
+}
+#clear{
+  float: none;
+}
+#datepickerPtag {
+ float: right;
+ 
+}
+#clearfloat{
+  clear: both;
+}
+body{
+  font-family: Work Sans, sans-serif;
+  width: 1300px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+      @media(max-width:900px) {
+        body{
+            background-color: #f3f0ec;
+        }
+        #header{
+          float: left;
+          margin-top: 20px;
+          border: solid black 1px;
+          border-radius: 10px;
+          text-align: center;
+          width: 500px;
+        }
+
+        .blogDesc{
+          display: none;
+        }
+        .coverPage{
+          position: absolute;
+          top: 500px;
+        }
+        .blogImage{
+          position: absolute;
+          top: 150px;
+        }
+        #footer{position: absolute;
+          top: 600px;}
+
+      }
+        container{
+          border: solid black 1px;
+          width: 1000px;
+        }
+
+#header{
+  margin-top: 20px;
+  border: solid black 1px;
+  border-radius: 10px;
+  text-align: center;
+}
+#menu{
+  /* border: solid black 1px; */
+  height: 50px;
+}
+.blogMenu ul{
+margin-left: 800px;
+}
+.blogMenu ul li{
+  float: left;
+  margin-left: 20px;
+  list-style-type: none;
+}
+.coverPage{
+  border-radius: 10px;
+  shape-outside: padding-box;
+  float: right;
+  border: solid black 1px;
+  height: 700px;
+  width: 800px;
+}
+.coverPage h3{
+  font-size: 25px;
+  margin-left: 10px;
+}
+.coverPage table{
+  width: 780px;
+  height: 330px;
+  margin-left:10px;
+  padding: 40px;
+  padding-top: 10px;
+}
+.coverPage table td{
+  border-radius: 10px;
+  shape-outside: padding-box;
+  /* border: solid black 1px; */
+    width: 50px;
+    height: 50px;
+}
+/* .coverPage table #boxPic{
+  width: 15px;
+height: 85px;
+} */
+.blogImage{
+  border: solid black 1px;
+  width: 400px;
+  height: 300px;
+  float: left;
+  margin-right: 90px;
+}
+#footer{
+  display: block;
+  border: solid black 1px;
+  margin-top:700px;
+}
+
+
+  .toggler { width: 500px; height: 200px; position: relative; }
+    #togglebutton { padding: .5em 1em; text-decoration: none; }
+    #toggleeffect { width: 240px; height: 170px; padding: 0.4em; position: relative; background: #fff; }
+    #toggleeffect h3 { margin: 0; padding: 0.4em; text-align: center; }
