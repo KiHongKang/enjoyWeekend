@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<title></title>
+	<script type="text/javascript">
+		$(function () {
+			$('li>u').addClass('bg');
+			$('#myFavorites>li').addClass('horizontal');
+			jQuery('#jquery').click(function(){
+			alert('jquery클릭');
+			});
+			jQuery('.ajax').click(function () {
+				alert('ajax클릭');
+			});
+
+		});
+
+	</script>
+	<style type="text/css">
+		.bg{background-color:yellow;}
+		.bgSilver{background-color: silver;}
+		.horizontal{float: left; list-style: none; margin: 10px;}
+	</style>
+
+</head>
+<body>
+	<h3>관심사항</h3>
+	<ul id="myFavorites">
+		<li><u>JAVA</u></li>
+		<li>JSSP/SERVLET</li>
+		<li id="jquery">JQUERY</li>
+		<li class="ajax">AJAX</li>
+	</ul>
+</body>
+</html>

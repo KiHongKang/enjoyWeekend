@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>마우스오버 , 마우스아웃</title>      <!-- mouseover/ mouseout -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- 	<script type="text/javascript">
+		$(function(){
+			$('#img1').mouseover(function(){
+				$('#showImage').html('<img id="img1" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" width="100">');
+			});
+		});
+		$(function(){
+			$('#img2').mouseover(function(){
+				$('#showImage').html('	<img id="img2"  src="https://www.google.com/images/nav_logo242.png" width="100">');
+			});
+		});
+		$(function(){
+			$('#img3').mouseover(function(){
+				$('#showImage').html('	<img id="img3"  src="https://ssl.gstatic.com/gb/images/i1_1967ca6a.png" width="100">');
+			});
+		});
+	</script> -->
+<script type="text/javascript">
+	$(function() {
+		$('#showImage').hide();
+		$('#product > img').mouseover(function () {
+		var	imgSrc = $(this).attr('src');
+			$('#showImage').show();
+			$('#showImage').html('<img src='+ imgSrc +'>');
+		});
+	});
+</script>
+
+	<style type="text/css">
+	.bord{
+		border: 1000px solid seagreen;
+	}
+</style>
+</head>
+<body>
+	<div id="product">
+		<img id="img1" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" width="100">
+		<img id="img2"  src="https://www.google.com/images/nav_logo242.png" width="100">
+		<img id="img3"  src="https://ssl.gstatic.com/gb/images/i1_1967ca6a.png" width="100">
+		<div id="showImage" style="border: 1px solid red; width: 400px; height: 300px;"></div>
+	</div>
+</body>
+</html>

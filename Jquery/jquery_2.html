@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<title></title>
+	<script type="text/javascript">
+		$(document).ready(function(){                //우선순위로 jquery > javascrip 
+		$('#doc').text('문서가 전부 로드됐습니다.');
+		});
+		$(window).load(function () {
+		$('#win').text('창이 모두 로드됐습니다.');	
+		});
+	</script>
+</head>
+<body>
+
+<h1>문서와 창이 모두 로드되는 시점</h1>
+<p>결과보기를 다시 눌러보면서 두 시점의 차이를 살펴보세요.</p>
+<p id="doc">잠시 기다려주세요.</p>
+<p id="win">잠시 기다려주세요.</p>
+</body>
+</html>

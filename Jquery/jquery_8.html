@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+		$(function() {
+			$('#id,#pwd').focus(function() { // text나 password 창 위를 찍으면 css 적용
+				$(this).addclass('bord'); // this는 #id, #pwd 를 가리키고 있다.
+			});
+			$('#id,#pwd').blur(function(){    //  창에서 벗어나서 다른 곳은 찍으면 적용된 css 해제 
+				$(this).removeClass('bord'); 
+			});
+		});
+</script>
+
+<style type="text/css">
+	.bord{
+		border: 2px solid seagreen;
+	}
+</style>
+
+<h1>login</h1>
+
+<input type="text" name="" size="12" id="id" autocomplete="off">
+<input type="password" name="" size="12" id="pwd" name="pwd">
+
+</body>
+</html>

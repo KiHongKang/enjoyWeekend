@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+			$(function(){ 
+			$('#btn1').on('click', function() {  //선택자 이벤트 핸들러 .on   / .off ( 이벤트, 발생하는 값)     
+			           var newText = html('에이치');    //h1에 있는 'html'이라는 값을 변수에 넣어주낟. 
+				$('#text').html(newText);
+			});
+	});
+	</script>
+</head>
+<body>
+<h1>html</h1>
+<p>아래의 버튼을 누르세요.</p>
+<button id="btn1">새로운 텍스트</button>
+<p id="text"></p>
+</body>
+</html>
