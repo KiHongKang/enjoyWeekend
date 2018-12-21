@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "utf-8">
+<meta name = "viewport" content = "width = device-width, initial-scale=1.0">
+<title>findPW</title>
+<!-- css -->
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Pen+Script" rel="stylesheet">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"/>
+<link rel="stylesheet" type="text/css" href="css\common.css">
+<link rel="stylesheet" type="text/css" href="css\findID.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<!-- js -->
+<script src = "https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- 공백처리 -->
+<script>
+	function onclick_txt_1(){
+          $("#txt_id").val('');  //값 초기화
+        }
+    function onclick_txt_2(){
+          $("#txt_name").val('');  //값 초기화
+        }
+</script>
+</head>
+
+
+<body>
+<header>
+<div id = "header_box">
+<div id = "header_box_li_1">
+	<div id = "header_box_li_1_text">
+	<ul class = "header_ul_1">
+		<li class = "header_li_1"><a href="ticketing.html">Ticket</a></li>
+		<li class = "header_li_1"><a href="lounge.html">Event</a></li>
+		<li class = "header_li_1" style = "font-weight : bold;"><a href="mypage.html">TicketChange</a></li>
+		<li class = "header_li_1" style = "padding:0px" onclick="lightbox_open()"><a href="#">Login</a></li>
+	</ul>
+	</div>
+</div>
+<div id = "header_box_li_2">
+<div id = "header_box_li_2_left">
+	<a href="index.html"><img src = "images/logo.png" style="width: 80px; height: 70px; "></a>
+</div>
+<div id = "header_box_li_2_right">
+	<ul class = "header_ul_2">
+		<li class = "header_li_2"><a href="ticketing.html">Ticketing</a></li>
+		<li class = "header_li_2"><a href="chart.html">Chart</a></li>
+		<li class = "header_li_2"><a href="lounge.html">Lounge</a></li>
+	</ul>
+</div>
+<div id = "header_box_li_2_right_2"><a href="mypage.html"><img src="images/person.png"></a></div>
+</div>
+</div>
+</header>
+
+
+
+
+<main>
+    <!-- 메인 전체화면 -->
+<div id = "all_box">
+
+<!-- 첫 번째 블록화면 -->
+<div id = "main_box">
+<div id = "box1">
+    <h1>비밀번호 찾기</h1>
+</div>
+<div id = "box2">
+    <h2>등록된 회원정보로<br>아이디를 찾으실 수 있습니다.</h2>
+</div>
+<div id = "box3">
+    <form>
+        <ul>
+            <li><h3>비밀번호 찾기</h3></li>
+        </ul>        
+    </form>
+</div>
+<div id = "box7" class="flex">
+	<div class = "box7_area">
+	<div class = "box7_label"><label>아이디</label></div>
+	<div class = "box7_text">
+	<input type = "text" id = "txt_id" value = "아이디를 입력하세요." onclick = "onclick_txt_1();" autocomplete=off style = "width:250px; height:30px; background-color: #f7f8f9; padding : 3px; color : #b3b5b7" >
+	</div>
+	</div>
+
+	<div class = "box7_area">
+	<div class = "box7_label"><label>이름</label></div>
+	<div class = "box7_text">
+	<input type = "text" id = "txt_name" value = "한글 또는 영문을 입력하세요." onclick = "onclick_txt_2();"autocomplete=off style = "width:250px; height:30px; background-color: #f7f8f9; padding : 3px; color : #b3b5b7" >
+	</div>
+	</div>
+
+	<div class = "box7_area">
+	<div class = "box7_label"><label>이메일 주소</label></div>
+	<div class = "box7_text">
+	<input type = "text" id = "text_email_1" value = "" style = "width : 150px; height : 20px; background-color: #f7f8f9; padding : 3px; color : #b3b5b7;" autocomplete=off> @ 
+	<input type = "text" id = "text_email_2" value = "" style = "width : 150px; height : 20px; background-color: #f7f8f9; padding : 3px; color : #b3b5b7; margin-right: 20px;" autocomplete=off>
+		<select id = "select_email" name = "select_email" value = "" style = "width : 150px; height : 30px; background-color: #f7f8f9; padding : 3px; color : #b3b5b7;" autocomplete=off>
+		<option value="1" id="self-input">직접 입력</option>
+        <option value="naver.com" selected>naver.com</option>
+        <option value="gmail.com">gmail.com</option>
+        <option value="nate.com">nate.com</option>
+        <option value="hanmail.net">hanmail.net</option>
+        <option value="yahoo.co.kr">yahoo.co.kr</option>
+        <option value="empas.com">empas.com</option>
+        <option value="dreamwiz.com">dreamwiz.com</option>
+		</select>
+		<button id = 'btn_submit' onclick = 'infor_submit()' style = "width:100px; height:30px; font-weight: bold;  padding : 0px; margin-left: 30px;">전송</button>
+	</div>
+	</div>
+
+
+<!-- 이메일 -->
+<script type="text/javascript"> //이메일 입력방식 선택
+ $('#select_email').change(function(){ $("#select_email option:selected").each(function () { if($(this).val()== '1'){ //직접입력일 경우
+  $("#text_email_2").val('');  //값 초기화
+ $("#text_email_2").attr("disabled",false);  //활성화 
+
+}else{  //직접입력이 아닐경우
+ $("#text_email_2").val($(this).text()); //선택값 입력
+ $("#text_email_2").attr("disabled",true); //비활성화 
+    }
+     }); 
+ }); 
+// $(document).ready(function(){
+// $('th').
+// })
+</script>
+
+
+	<div class = "box7_area">
+	<div class = "box7_label"><label>인증번호</label></div>
+	<div class = "box7_text">
+	<input type = "text" id = "txt_name" value = "" autocomplete=off style = "width:250px; height:30px; background-color: #f7f8f9; padding : 3px; color : #b3b5b7" >
+	</div>
+	</div>
+
+<div class = "box7_area">
+	<div class = "box7_label"><label><a href = "#">비밀번호 찾기</a></label></div>
+	<div class = "box7_label" style = "padding-left:30px;"><label>당신의 비밀번호</label></div>
+</div>
+</div>
+
+
+
+</div>
+
+</div>
+</main>
+
+
+
+
+<footer>
+<div id = "footer_box">
+<div id = "footer_box_li_1">
+	<div class="footin_1">
+		<ul class="footlink">
+			<li><a href="index.html">회사소개</a></li>
+			<li><a href="index.html">이용약관</a></li>
+			<li><a href="index.html">개인정보 처리방침</a></li>
+			<li><a href="index.html">청소년보호정책 (책임자: 김그린)</a></li>
+			<li><a href="index.html">예매권 구매문의</a></li>
+			<li><a href="index.html">광고안내</a></li>
+			<li><a href="index.html">할인정보</a></li>
+			<li><a href="sitemap.html"><b>사이트맵</b></a></li>
+			<li><a href="index.html">고객센터</a></li>
+		</ul>
+	</div>
+</div>
+<div id = "footer_box_li_2">
+		<div class="footin_2">
+	
+		<ul class="address">
+			<li>사업자등록번호 123-45-67890</li>
+			<li>통신판매업 신고번호 제2018-서울강남-00000호</li>
+			<li>대표이사 김그린</li><br/>
+		</ul>
+		<ul class="address2" style="padding-top:0px;">
+			<li>그린컴그룹㈜</li>
+			<li>서울특별시 강남구 강남대로 98길, 4층 (역삼동, 플라타너스빌딩)</li>	
+			<li>고객센터 1111-1111 (운영시간 09:00~18:00)</li><br/>
+		</ul>
+	    <p class="cptime" style="padding-top:10px;">인터넷신문등록번호 서울 가 11111 | 등록일자 2018년 12월 21일 | 무비무비닷컴 | 발행인, 편집인 : 김그린</p><br/>
+		<p class="copy">Copyright ⓒ Green Group Inc. All rights reserved.</p>
+		<p class="fclean"><a href="https://www.copyrightok.kr/" target="_blank"><img src="//images.maxmovie.com/images/web/2016_new/images/main/clean_site.png" alt="CLEAN SITE"></a></p>
+	</div>
+</div>
+
+
+</div>
+</footer>
+
+<!-- 로그인팝업시 뒷배경 처리 -->
+<div id="block"></div>
+
+<!-- 로그인 팝업창 시작 -->
+	<div id="maxMemberLoginPopup">
+		<div class="nllayerin" style="left: 40%; top: 50%; margin-top: -198px; margin-left: -100px;">
+			<h3 class="ptit"><img src="images\login\btn_login_tit1.png" alt="로그인"></h3>
+			<div class="nllaytxt">
+				<p class="nlltit">Welcome to Cinema Movie</p>
+				<div class="logfl">
+					<div class="logflbox">
+						<ul class="flogin">
+							<li><input type="text" name="txtMaxLoginId" placeholder="아이디" style="width:254px"></li>
+							<li><input type="password" name="txtMaxLoginPw" placeholder="비밀번호" style="width:254px"></li>
+						</ul>                   
+						<p class="pt10 lh pb20"><a href="#" class="btnMaxLogin"><img src="images\login\btn_nologin.png" alt="로그인"></a></p>
+						<ul class="floglink">                       
+							<li><a href="registeration.html" target="MaxID">회원가입</a></li>
+							<li><a href="findID.html" target="MaxID">아이디</a>/
+							<a href="findPW.html" target="MaxID">비밀번호찾기</a>
+							</li>                   
+						</ul>               
+					</div>           
+				</div>           
+			</div>       
+			<p class="pcl"><a href="#" id="btnMaxLoginClose"><img src="images\login\btn_popup_close.png" alt="레이어 닫기"   onclick="lightbox_close()"></a></p>   
+		</div>
+	</div>
+
+	<!-- 로그인 팝업 기능 -->
+	<script type="text/javascript">
+	// 초기화
+	var lightbox = document.querySelector('#maxMemberLoginPopup');
+	var block = document.querySelector('#block'); 
+
+// 라이트 박스 표시
+function lightbox_open(){
+	lightbox.setAttribute('class', 'player');
+	block.setAttribute('class', 'player');
+}
+function lightbox_close(){
+	lightbox.setAttribute('class', '');
+	block.setAttribute('class', '');
+}
+
+</script>
+
+
+
+</body>
+</html>

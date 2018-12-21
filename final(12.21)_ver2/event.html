@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "utf-8">
+<meta name = "viewport" content = "width = device-width, initial-scale=1.0">
+<title>event</title>
+
+
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="css\event.css">
+<link rel="stylesheet" type="text/css" href="css\common.css">
+<link rel="stylesheet" href="jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="./css/event/slick.css">
+<link rel="stylesheet" type="text/css" href="./css/event/slick-theme.css">
+<!-- js -->
+<script src = "https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script src="./slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+      $(".vertical-center-4").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        infinite : true,
+        speed:3000,
+        autoplay:true,
+        autoplaySpeed:4000,
+      });
+   
+      $(".variable").slick({
+        dots: true,
+        infinite: true,
+        variableWidth: true
+      });
+
+    });
+</script>
+</head>
+<body>
+<header>
+<div id = "header_box">
+<div id = "header_box_li_1">
+	<div id = "header_box_li_1_text">
+	<ul class = "header_ul_1">
+		<li class = "header_li_1"><a href="ticketing.html">Ticket</a></li>
+		<li class = "header_li_1"><a href="event.html">Event</a></li>
+		<li class = "header_li_1" style = "font-weight : bold;"><a href="mypage.html">TicketChange</a></li>
+		<li class = "header_li_1" style = "padding:0px" onclick="lightbox_open()"><a href="#">Login</a></li>
+	</ul>
+	</div>
+</div>
+<div id = "header_box_li_2">
+<div id = "header_box_li_2_left">
+	<a href="index.html"><img src = "images/logo.png" style="width: 80px; height: 70px; "></a>
+</div>
+<div id = "header_box_li_2_right">
+	<ul class = "header_ul_2">
+		<li class = "header_li_2"><a href="ticketing.html">Ticketing</a></li>
+		<li class = "header_li_2"><a href="chart.html">Chart</a></li>
+		<li class = "header_li_2"><a href="lounge.html">Lounge</a></li>
+	</ul>
+</div>
+<div id = "header_box_li_2_right_2"><a href="mypage.html"><img src="images/person.png"></a></div>
+</div>
+</div>
+</header>
+<main>
+	<!-- 메인 전체화면 -->
+<div id = "all_box">
+
+<!-- 첫 번째 블록화면 -->
+<div id = "adv_box">
+<section class="variable slider">
+    <div>
+      <img src="http://saemip.com/upfiles/banner/1650401717.jpg" style = "width:1200px; height:350px;">
+    </div>  <div>
+      <img src="http://saemip.com/upfiles/banner/2776207657.jpg" style = "width:1200px; height:350px;">
+    </div>  <div>
+      <img src="http://saemip.com/upfiles/banner/289715873.jpg" style = "width:1200px; height:350px;">
+    </div>  <div>
+      <img src="http://saemip.com/upfiles/banner/3560341111.jpg" style = "width:1200px; height:350px;">
+    </div>
+</section>
+</div>
+
+<div id = "main_box">
+<div class = "event_title">
+<ul>
+	<li style = "font-size: 20px;">곧 개최되는 행사 / </li>
+	<li style = "font-size: 15px; color : #32b507">지금 바로 시작할 수 있어요.</li>
+</ul>
+</div>
+<div class = "event_box">
+<div class = "event_box_1">
+<div class ="event_box_1_img"><img src="images/event/1.jpg" style = "width:400px; height : 280px;"></div>
+<div class = "event_box_1_txt">
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px;">선정릉역 공상카페</li>
+	<li style = "float: right; margin-right: 30px; color: #1e770d; font-weight: bold">25세 ~ 37세</li>
+</ul>
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px; font-weight: bold;">[48차] 12월 21일 (금) 소맥파티</li>
+</ul>
+<ul style = "margin-top: 10px; margin-bottom: 5px; padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px; color: #0286e5">남성</li>
+	<li style = "padding-right: 40px; color: #0286e5">40,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+<ul style = "padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px;color: #f9434f">여성</li>
+	<li style = "padding-right: 40px;color: #f9434f ">30,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+</div>
+</div>	
+<div class = "event_box_1">
+<div class ="event_box_1_img"><img src="images/event/1.jpg" style = "width:400px; height : 280px;"></div>
+<div class = "event_box_1_txt">
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px;">선정릉역 공상카페</li>
+	<li style = "float: right; margin-right: 30px; color: #1e770d; font-weight: bold">25세 ~ 37세</li>
+</ul>
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px; font-weight: bold;">[48차] 12월 21일 (금) 소맥파티</li>
+</ul>
+<ul style = "margin-top: 10px; margin-bottom: 5px; padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px; color: #0286e5">남성</li>
+	<li style = "padding-right: 40px; color: #0286e5">40,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+<ul style = "padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px;color: #f9434f">여성</li>
+	<li style = "padding-right: 40px;color: #f9434f ">30,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+</div>
+</div>	
+<div class = "event_box_1">
+<div class ="event_box_1_img"><img src="images/event/2.jpg" style = "width:400px; height : 280px;"></div>
+<div class = "event_box_1_txt">
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px;">선정릉역 공상카페</li>
+	<li style = "float: right; margin-right: 30px; color: #1e770d; font-weight: bold">25세 ~ 37세</li>
+</ul>
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px; font-weight: bold;">[48차] 12월 21일 (금) 소맥파티</li>
+</ul>
+<ul style = "margin-top: 10px; margin-bottom: 5px; padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px; color: #0286e5">남성</li>
+	<li style = "padding-right: 40px; color: #0286e5">40,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+<ul style = "padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px;color: #f9434f">여성</li>
+	<li style = "padding-right: 40px;color: #f9434f ">30,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+</div>
+</div>	
+</div>
+
+<div class = "event_box">
+<div class = "event_box_1">
+<div class ="event_box_1_img"><img src="images/event/3.jpg" style = "width:400px; height : 280px;"></div>
+<div class = "event_box_1_txt">
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px;">선정릉역 공상카페</li>
+	<li style = "float: right; margin-right: 30px; color: #1e770d; font-weight: bold">25세 ~ 37세</li>
+</ul>
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px; font-weight: bold;">[48차] 12월 21일 (금) 소맥파티</li>
+</ul>
+<ul style = "margin-top: 10px; margin-bottom: 5px; padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px; color: #0286e5">남성</li>
+	<li style = "padding-right: 40px; color: #0286e5">40,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+<ul style = "padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px;color: #f9434f">여성</li>
+	<li style = "padding-right: 40px;color: #f9434f ">30,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+</div>
+</div>	
+<div class = "event_box_1">
+<div class ="event_box_1_img"><img src="images/event/4.jpg" style = "width:400px; height : 280px;"></div>
+<div class = "event_box_1_txt">
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px;">선정릉역 공상카페</li>
+	<li style = "float: right; margin-right: 30px; color: #1e770d; font-weight: bold">25세 ~ 37세</li>
+</ul>
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px; font-weight: bold;">[48차] 12월 21일 (금) 소맥파티</li>
+</ul>
+<ul style = "margin-top: 10px; margin-bottom: 5px; padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px; color: #0286e5">남성</li>
+	<li style = "padding-right: 40px; color: #0286e5">40,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+<ul style = "padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px;color: #f9434f">여성</li>
+	<li style = "padding-right: 40px;color: #f9434f ">30,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+</div>
+</div>	
+<div class = "event_box_1">
+<div class ="event_box_1_img"><img src="images/event/5.jpg" style = "width:400px; height : 280px;"></div>
+<div class = "event_box_1_txt">
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px;">선정릉역 공상카페</li>
+	<li style = "float: right; margin-right: 30px; color: #1e770d; font-weight: bold">25세 ~ 37세</li>
+</ul>
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px; font-weight: bold;">[48차] 12월 21일 (금) 소맥파티</li>
+</ul>
+<ul style = "margin-top: 10px; margin-bottom: 5px; padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px; color: #0286e5">남성</li>
+	<li style = "padding-right: 40px; color: #0286e5">40,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+<ul style = "padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px;color: #f9434f">여성</li>
+	<li style = "padding-right: 40px;color: #f9434f ">30,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+</div>
+</div>	
+</div>
+
+<div class = "event_title">
+<ul>
+	<li style = "font-size: 20px;">모임에 대한 후기 게시판 / </li>
+	<li style = "font-size: 15px; color : #32b507">솔직한 후기! 모두 함께 만들어봐요!</li>
+</ul>
+</div>
+<div class = "event_box">
+<div class = "event_box_1">
+<div class ="event_box_1_img"><img src="images/event/6.jpg" style = "width:400px; height : 280px;"></div>
+<div class = "event_box_1_txt">
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px;">선정릉역 공상카페</li>
+	<li style = "float: right; margin-right: 30px; color: #1e770d; font-weight: bold">25세 ~ 37세</li>
+</ul>
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px; font-weight: bold;">[48차] 12월 21일 (금) 소맥파티</li>
+</ul>
+<ul style = "margin-top: 10px; margin-bottom: 5px; padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px; color: #0286e5">남성</li>
+	<li style = "padding-right: 40px; color: #0286e5">40,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+<ul style = "padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px;color: #f9434f">여성</li>
+	<li style = "padding-right: 40px;color: #f9434f ">30,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+</div>
+</div>	
+<div class = "event_box_1">
+<div class ="event_box_1_img"><img src="images/event/7.jpg" style = "width:400px; height : 280px;"></div>
+<div class = "event_box_1_txt">
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px;">선정릉역 공상카페</li>
+	<li style = "float: right; margin-right: 30px; color: #1e770d; font-weight: bold">25세 ~ 37세</li>
+</ul>
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px; font-weight: bold;">[48차] 12월 21일 (금) 소맥파티</li>
+</ul>
+<ul style = "margin-top: 10px; margin-bottom: 5px; padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px; color: #0286e5">남성</li>
+	<li style = "padding-right: 40px; color: #0286e5">40,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+<ul style = "padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px;color: #f9434f">여성</li>
+	<li style = "padding-right: 40px;color: #f9434f ">30,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+</div>
+</div>	
+<div class = "event_box_1">
+<div class ="event_box_1_img"><img src="images/event/8.jpg" style = "width:400px; height : 280px;"></div>
+<div class = "event_box_1_txt">
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px;">선정릉역 공상카페</li>
+	<li style = "float: right; margin-right: 30px; color: #1e770d; font-weight: bold">25세 ~ 37세</li>
+</ul>
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px; font-weight: bold;">[48차] 12월 21일 (금) 소맥파티</li>
+</ul>
+<ul style = "margin-top: 10px; margin-bottom: 5px; padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px; color: #0286e5">남성</li>
+	<li style = "padding-right: 40px; color: #0286e5">40,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+<ul style = "padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px;color: #f9434f">여성</li>
+	<li style = "padding-right: 40px;color: #f9434f ">30,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+</div>
+</div>	
+</div>
+
+<div class = "event_box">
+<div class = "event_box_1">
+<div class ="event_box_1_img"><img src="images/event/9.jpg" style = "width:400px; height : 280px;"></div>
+<div class = "event_box_1_txt">
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px;">선정릉역 공상카페</li>
+	<li style = "float: right; margin-right: 30px; color: #1e770d; font-weight: bold">25세 ~ 37세</li>
+</ul>
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px; font-weight: bold;">[48차] 12월 21일 (금) 소맥파티</li>
+</ul>
+<ul style = "margin-top: 10px; margin-bottom: 5px; padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px; color: #0286e5">남성</li>
+	<li style = "padding-right: 40px; color: #0286e5">40,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+<ul style = "padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px;color: #f9434f">여성</li>
+	<li style = "padding-right: 40px;color: #f9434f ">30,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+</div>
+</div>	
+<div class = "event_box_1">
+<div class ="event_box_1_img"><img src="images/event/1.jpg" style = "width:400px; height : 280px;"></div>
+<div class = "event_box_1_txt">
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px;">선정릉역 공상카페</li>
+	<li style = "float: right; margin-right: 30px; color: #1e770d; font-weight: bold">25세 ~ 37세</li>
+</ul>
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px; font-weight: bold;">[48차] 12월 21일 (금) 소맥파티</li>
+</ul>
+<ul style = "margin-top: 10px; margin-bottom: 5px; padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px; color: #0286e5">남성</li>
+	<li style = "padding-right: 40px; color: #0286e5">40,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+<ul style = "padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px;color: #f9434f">여성</li>
+	<li style = "padding-right: 40px;color: #f9434f ">30,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+</div>
+</div>	
+<div class = "event_box_1">
+<div class ="event_box_1_img"><img src="images/event/2.jpg" style = "width:400px; height : 280px;"></div>
+<div class = "event_box_1_txt">
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px;">선정릉역 공상카페</li>
+	<li style = "float: right; margin-right: 30px; color: #1e770d; font-weight: bold">25세 ~ 37세</li>
+</ul>
+<ul style = "margin-top: 10px; ">
+	<li style = "float: left; font-size: 15px;  margin-left: 30px; font-weight: bold;">[48차] 12월 21일 (금) 소맥파티</li>
+</ul>
+<ul style = "margin-top: 10px; margin-bottom: 5px; padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px; color: #0286e5">남성</li>
+	<li style = "padding-right: 40px; color: #0286e5">40,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+<ul style = "padding-left: 30px; font-size : 13px; font-weight: bold;">
+	<li style = "padding-right: 10px;">이미지</li>
+	<li style = "padding-right: 80px;color: #f9434f">여성</li>
+	<li style = "padding-right: 40px;color: #f9434f ">30,000원</li>
+	<li>30명 / 30명</li>
+</ul>
+</div>
+</div>	
+</div>
+
+</div>
+</div>
+</main>
+<footer>
+<div id = "footer_box">
+<div id = "footer_box_li_1">
+	<div class="footin_1">
+		<ul class="footlink">
+			<li><a href="index.html">회사소개</a></li>
+			<li><a href="index.html">이용약관</a></li>
+			<li><a href="index.html">개인정보 처리방침</a></li>
+			<li><a href="index.html">청소년보호정책 (책임자: 김그린)</a></li>
+			<li><a href="index.html">예매권 구매문의</a></li>
+			<li><a href="index.html">광고안내</a></li>
+			<li><a href="index.html">할인정보</a></li>
+			<li><a href="sitemap.html"><b>사이트맵</b></a></li>
+			<li><a href="index.html">고객센터</a></li>
+		</ul>
+	</div>
+</div>
+<div id = "footer_box_li_2">
+		<div class="footin_2">
+	
+		<ul class="address">
+			<li>사업자등록번호 123-45-67890</li>
+			<li>통신판매업 신고번호 제2018-서울강남-00000호</li>
+			<li>대표이사 김그린</li><br/>
+		</ul>
+		<ul class="address2" style="padding-top:0px;">
+			<li>그린컴그룹㈜</li>
+			<li>서울특별시 강남구 강남대로 98길, 4층 (역삼동, 플라타너스빌딩)</li>	
+			<li>고객센터 1111-1111 (운영시간 09:00~18:00)</li><br/>
+		</ul>
+	    <p class="cptime" style="padding-top:10px;">인터넷신문등록번호 서울 가 11111 | 등록일자 2018년 12월 21일 | 무비무비닷컴 | 발행인, 편집인 : 김그린</p><br/>
+		<p class="copy">Copyright ⓒ Green Group Inc. All rights reserved.</p>
+		<p class="fclean"><a href="https://www.copyrightok.kr/" target="_blank"><img src="//images.maxmovie.com/images/web/2016_new/images/main/clean_site.png" alt="CLEAN SITE"></a></p>
+	</div>
+</div>
+
+
+</div>
+</footer>
+
+<!-- 로그인팝업시 뒷배경 처리 -->
+<div id="block"></div>
+
+<!-- 로그인 팝업창 시작 -->
+	<div id="maxMemberLoginPopup">
+		<div class="nllayerin" style="left: 40%; top: 50%; margin-top: -198px; margin-left: -100px;">
+			<h3 class="ptit"><img src="images\login\btn_login_tit1.png" alt="로그인"></h3>
+			<div class="nllaytxt">
+				<p class="nlltit">Welcome to Cinema Movie</p>
+				<div class="logfl">
+					<div class="logflbox">
+						<ul class="flogin">
+							<li><input type="text" name="txtMaxLoginId" placeholder="아이디" style="width:254px"></li>
+							<li><input type="password" name="txtMaxLoginPw" placeholder="비밀번호" style="width:254px"></li>
+						</ul>                   
+						<p class="pt10 lh pb20"><a href="#" class="btnMaxLogin"><img src="images\login\btn_nologin.png" alt="로그인"></a></p>
+						<ul class="floglink">                       
+							<li><a href="registeration.html" target="MaxID">회원가입</a></li>
+							<li><a href="findID.html" target="MaxID">아이디</a>/
+							<a href="findPW.html" target="MaxID">비밀번호찾기</a>
+							</li>                   
+						</ul>               
+					</div>           
+				</div>           
+			</div>       
+			<p class="pcl"><a href="#" id="btnMaxLoginClose"><img src="images\login\btn_popup_close.png" alt="레이어 닫기"   onclick="lightbox_close()"></a></p>   
+		</div>
+	</div>
+	<script type="text/javascript">
+	// 초기화
+	var lightbox = document.querySelector('#maxMemberLoginPopup');
+	var block = document.querySelector('#block'); 
+
+// 라이트 박스 표시
+function lightbox_open(){
+	lightbox.setAttribute('class', 'player');
+	block.setAttribute('class', 'player');
+}
+function lightbox_close(){
+	lightbox.setAttribute('class', '');
+	block.setAttribute('class', '');
+}
+
+</script>
+</body>
+</html>

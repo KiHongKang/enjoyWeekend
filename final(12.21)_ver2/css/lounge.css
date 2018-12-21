@@ -1,0 +1,177 @@
+
+main{
+
+}
+#all_box{
+	width:100%;
+	height:2500px;
+	margin : 0 auto;
+}
+#main_box{
+	width:60%;
+	height:1200px;
+/*	background-color: red;*/
+	margin : 0 auto;
+}
+
+
+
+
+
+/*-------- 라운지 레이아웃 및 서식 ----------*/
+.navdp{width:100%;background:#232323}
+.navdp .navdpin{width:1141.800px;margin:0 auto; margin-bottom:20px; }
+.navdp .navdpin ul{*zoom:1}
+.navdp .navdpin ul:after{content:""; display:block; clear:both}
+.navdp .navdpin ul li{float:left}
+.navdp .navdpin ul li a{display:inline-block;padding:0 19px;height:45px;line-height:45px;text-align:center;font-size:14px;color:#fff;/*background: url("/images/web/2016_new/images/main/bl_menu_bar.gif") no-repeat 0 17px;*/text-decoration:none}
+.navdp .navdpin ul li:first-child a{background:none}
+.navdp .navdpin ul li a:hover{display:inline-block;padding:0 19px;height:45px;line-height:45px;text-align:center;font-size:14px;color:#f03f37;font-weight:bold;background:#000;text-decoration:none}
+.navdp .navdpin ul li a:hover span{text-decoration:none}
+.navdp .navdpin ul li a.on{display:inline-block;padding:0 19px;height:45px;line-height:45px;text-align:center;font-size:14px;color:#f03f37;font-weight:bold;background:#000}
+
+.loulog{position:relative;padding:21px 31px;margin-bottom:49px;background:#f5f5f5}
+.loulog .loumy{padding-left:27px;font-size:14px;color:#222;line-height:19px;background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_my.png') no-repeat 0 0}
+.loulog .loumy span{color:#f03f37;font-weight:700}
+.loulog .loumy em{font-weight:700}
+.loulog .louin{position:absolute;right:30px;top:21px;display:inline-block;padding-right:10px;line-height:17px;font-size:12px;color:#f03f37;background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_red.png') no-repeat right 6px}
+.lbtit{position:relative;padding-bottom:5px;line-height:0}
+.lbtit a{position:absolute;right:0;top:0px;display:inline-block;padding:0 20px;line-height:28px;font-size:12px;color:#222;letter-spacing:-1pt;border:1px solid #ddd;text-decoration:none}
+.lbtxt{padding-bottom:17px;line-height:19px;font-size:14px;color:#666}
+
+
+.sisaboxin {/*border-bottom: solid 1px black;*/ margin-bottom: 80px; }
+.sisaboxin ul{width:206%;*zoom:1}
+.sisaboxin ul:after{content:""; display:block; clear:both}
+.sisaboxin ul li{float:left; padding-right: 45px; position:relative;cursor:pointer}
+.sisaboxin ul li img{width: 260px; height: 260px;}
+.sisaboxin ul li .sisali{position:relative;width:260px;padding-right:27px}
+.sisaboxin ul li .sisali a.hmv{position:relative;display:block}
+.sisaboxin ul li .sisali a.hmv .viscov{position:absolute;left:0;top:0}
+.sisaboxin ul li .sisali a.hmv .scov{position:absolute;left:0;top:0;display:none}
+.sisaboxin ul li .sisali .hmvtx{position:absolute;left:0;top:161px;width:250px;display:none; background-color: black;}
+.sisaboxin ul li .sisali .hmvtx .hmtit{*width:196px}
+.sisaboxin ul li .sisali .hmvtx .hmtit a{display:block;color:#fff;text-decoration:none;padding:0 25px;font-size:18px;color:#fff;line-height:25px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.sisaboxin ul li .sisali .hmvtx .hmzone1{padding-left:25px;padding-top:13px;font-size:13px;color:#fff;line-height:19px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.sisaboxin ul li .sisali .hmvtx .hmzone2{padding-left:25px;padding-top:5px;padding-bottom:17px;font-size:13px;color:#fff;line-height:19px}
+.sisaboxin ul li .sisali .hmvtx .hmlk{display:inline-block;padding:0 19px;margin-left:25px;height:34px;line-height:34px;color:#fff;font-size:13px;letter-spacing:-1pt;background:#f03f37;text-decoration:none}
+.sisaboxin ul li .sisali .hmvtx .none{background:#222}
+.sisaboxin ul li .sisali .sicon{position:absolute;left:17px;top:10px;text-align:right}
+.sisaboxin ul li .sisali .sicon span{display:block;text-align:right;padding-left:44px;height:34px;margin-bottom:10px}
+.sisaboxin ul li .sisali .sicon span em{font-size:12px;color:#fff;line-height:34px;display:none}
+.sisaboxin ul li .sisali .sicon span.hi{background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_mic.png') no-repeat left 0}
+.sisaboxin ul li .sisali .sicon span.gv{background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_gv.png') no-repeat left 0}
+.sisaboxin ul li .sisali .sicon span.bli{background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_hi.png') no-repeat left 0}
+.sisaboxin ul li .sisali .sicon span.all{background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_all.png') no-repeat left 0}
+.sisaboxin ul li .sisali .sicon span.show{background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_show.png') no-repeat left 0}
+.sisaboxin ul li .sisali .sicon span.end{background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_end.png') no-repeat left 0}
+.sisaboxin ul li .sisali .dwtxt{padding-top:15px}
+.sisaboxin ul li .sisali .dwtxt a{display:block;height:20px;line-height:20px;font-size:14px;color:#222;font-weight:700;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.sisaboxin ul li .sisali .dwtxt a:hover{color:#f03f37;text-decoration:none}
+.sisaboxin ul li .sisali .dwtxt span{display:block;padding-top:3px;line-height:17px;font-size:12px;color:#666}
+.sisaboxin ul li:hover .sisali .dwtxt a{color:#f03f37}
+
+
+.sisaboxin ul li:hover .sisali .hmvtx{position:absolute;left:0;top:80px;width:260px;display:block}
+.sisaboxin ul li:hover .sisali a.hmv .scov{position:absolute;left:0;top:0;display:block}
+.sisaboxin ul li:hover .sisali .sicon span em{font-size:12px;color:#fff;line-height:34px;display:block}
+.sisaboxin ul li:hover .sisali .sicon span.hi{background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_mic.png') no-repeat left -34px}
+.sisaboxin ul li:hover .sisali .sicon span.gv{background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_gv.png') no-repeat left -34px}
+.sisaboxin ul li:hover .sisali .sicon span.bli{background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_hi.png') no-repeat left -34px}
+.sisaboxin ul li:hover .sisali .sicon span.all{background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_all.png') no-repeat left -34px}
+.sisaboxin ul li:hover .sisali .sicon span.show{background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_show.png') no-repeat left -34px}
+.sisaboxin ul li:hover .sisali .sicon span.end{background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_end.png') no-repeat left -34px}
+
+.eveboxin{width:1141.800px;padding-bottom:10px; width: 1000px;  }
+.eveboxin ul{*zoom:1; width:1200px;}
+.eveboxin ul:after{content:"";display:block;clear:both}
+.eveboxin ul li{float:left;padding-right:40px;padding-bottom:38px}
+.eveboxin ul li.evb1 .leveim{background:url('//image.maxmovie.com/lounge_new/lounge/lounge_eve_bg1.gif') no-repeat 0 0}
+.eveboxin ul li.evb2 .leveim{background:url('//image.maxmovie.com/lounge_new/lounge/lounge_eve_bg2.gif') no-repeat 0 0}
+.eveboxin ul li.evb3 .leveim{background:url('//image.maxmovie.com/lounge_new/lounge/lounge_eve_bg3.gif') no-repeat 0 0}
+.eveboxin ul li a{position:relative;display:block;text-decoration:none}
+.eveboxin ul li a:hover{text-decoration:none}
+.eveboxin ul li a .leveim{position:relative;width:258px; height: 105px;overflow:hidden}
+.eveboxin ul li a .leveim img{width:250px}
+.eveboxin ul li a .leveim .ecov{position:absolute;left:0;top:0}
+.eveboxin ul li a .levetxt{padding-top:17px;font-size:14px;line-height:19px;color:#222;font-weight:700;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.eveboxin ul li a:hover .levetxt{color:#f03f37}
+.eveboxin ul li a .leveday{padding-top:3px;font-size:12px;line-height:16px;color:#666}
+.eveboxin ul li a .leveday span{display:inline-block;color:#f03f37;padding-right:8px;margin-right:8px;background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_bar.gif') no-repeat right 5px}
+
+.lpoibox{margin:0 10px 37px;border:1px solid #e1e1e1}
+.lpoibox ul{*zoom:1}
+.lpoibox ul:after{content:"";display:block;clear:both}
+.lpoibox ul li{width:50%;float:left}
+.lpoibox ul li .lpic1{padding:26px 0 35px;text-align:center;background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_po1.png') no-repeat center 39px}
+.lpoibox ul li .lpic2{padding:26px 0 35px;text-align:center;background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_po3.png') no-repeat center 39px}
+.lpoibox ul li .lpic3{padding:26px 0 35px;text-align:center;background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_po2.png') no-repeat center 39px}
+.lpoibox ul li .lplk{text-align:center}
+.lpoibox ul li .lplk a{display:inline-block;padding-top:50px;font-size:16px;color:#222;padding-right:11px;line-height:21px;font-weight:600;background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_arrow.png') no-repeat right 55px}
+.lpoibox ul li .lplk a:hover{color:#f03f37;background:url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ered.png') no-repeat right 55px}
+.lpoibox ul li .lptxt{padding-top:10px;text-align:center;line-height:18px;font-size:13px;color:#666}
+.lpoibox ul li .lptxt a{color:#666}
+.lpoibox ul li .lptxt a:hover{color:#666;text-decoration:none}
+
+.lstit{position:relative;line-height:0;padding-bottom:20px;padding-left:10px}
+.wrapL{display: flex; justify-content: flex-start; margin-bottom: 30px;}
+.lstit a{display:inline-block;padding-left:10px;vertical-align:middle;cursor:default}
+.lstit span{position:absolute;left:130px;top:-72px;display:block;padding:12px 17px;font-size:12px;line-height:20px;color:#666;border:1px solid #999;background:#fff;letter-spacing:-1pt}
+.lstit span em{color:#f03f37}
+
+
+.lpllk{padding:0 10px 0}
+.lpllk ul{*zoom:1}
+.lpllk ul:after{content:"";display:block;clear:both}
+.lpllk ul li{float:left;margin-bottom:27px;padding-right:20px}
+.lpllk ul li.pot1 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic1.gif') no-repeat 0 0}
+.lpllk ul li.pot2 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic2.gif') no-repeat 0 0}
+.lpllk ul li.pot3 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic3.gif') no-repeat 0 0}
+.lpllk ul li.pot4 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic4.gif') no-repeat 0 0}
+.lpllk ul li.pot5 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic5.gif') no-repeat 0 0}
+.lpllk ul li.pot6 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic6.gif') no-repeat 0 0}
+.lpllk ul li.pot7 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic7.gif') no-repeat 0 0}
+.lpllk ul li.pot8 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic8.gif') no-repeat 0 0}
+.lpllk ul li.pot9 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic9.gif') no-repeat 0 0}
+.lpllk ul li.pot10 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic10.gif') no-repeat 0 0}
+.lpllk ul li.pot11 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic11.gif') no-repeat 0 0}
+.lpllk ul li.pot12 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic12.gif') no-repeat 0 0}
+.lpllk ul li.pot13 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic13.gif') no-repeat 0 0}
+.lpllk ul li.pot14 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic14.gif') no-repeat 0 0}
+.lpllk ul li.pot15 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic15.gif') no-repeat 0 0}
+.lpllk ul li.pot16 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic16.gif') no-repeat 0 0}
+.lpllk ul li.pot17 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic17.gif') no-repeat 0 0}
+.lpllk ul li.pot18 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic18.gif') no-repeat 0 0}
+.lpllk ul li.pot19 .potin{float:left;background:#f5f5f5 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic19.gif') no-repeat 0 0}
+
+.lpllk ul li.pot1:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic1.gif') no-repeat 0 -70px}
+.lpllk ul li.pot2:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic2.gif') no-repeat 0 -70px}
+.lpllk ul li.pot3:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic3.gif') no-repeat 0 -70px}
+.lpllk ul li.pot4:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic4.gif') no-repeat 0 -70px}
+.lpllk ul li.pot5:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic5.gif') no-repeat 0 -70px}
+.lpllk ul li.pot6:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic6.gif') no-repeat 0 -70px}
+.lpllk ul li.pot7:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic7.gif') no-repeat 0 -70px}
+.lpllk ul li.pot8:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic8.gif') no-repeat 0 -70px}
+.lpllk ul li.pot9:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic9.gif') no-repeat 0 -70px}
+.lpllk ul li.pot10:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic10.gif') no-repeat 0 -70px}
+.lpllk ul li.pot11:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic11.gif') no-repeat 0 -70px}
+.lpllk ul li.pot12:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic12.gif') no-repeat 0 -70px}
+.lpllk ul li.pot13:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic13.gif') no-repeat 0 -70px}
+.lpllk ul li.pot14:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic14.gif') no-repeat 0 -70px}
+.lpllk ul li.pot15:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic15.gif') no-repeat 0 -70px}
+.lpllk ul li.pot16:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic16.gif') no-repeat 0 -70px}
+.lpllk ul li.pot17:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic17.gif') no-repeat 0 -70px}
+.lpllk ul li.pot18:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic18.gif') no-repeat 0 -70px}
+.lpllk ul li.pot19:hover .potin{float:left;background:#f03f37 url('//image.maxmovie.com/lounge_new/lounge/lounge_bl_ic19.gif') no-repeat 0 -70px}
+
+.lpllk ul li a{width:221px;height:70px;display:block;background:url('//image.maxmovie.com/lounge_new/lounge/lounge_link_arrow.png') no-repeat right 0;text-decoration:none}
+.lpllk ul li a:hover{background:url('//image.maxmovie.com/lounge_new/lounge/lounge_link_arrow.png') no-repeat right -70px;text-decoration:none}
+.lpllk ul li a p{padding:15px 0 15px 70px;line-height:20px;font-size:14px;color:#222;font-weight:600}
+.lpllk ul li a p em{color:#f03f37}
+.lpllk ul li a p span{line-height:19px;font-size:12px;color:#666;font-weight:normal}
+
+.lpllk ul li:hover a p{color:#fff}
+.lpllk ul li:hover a p span{color:#fff}
+.lpllk ul li:hover a p em{color:#fff}
+
+.subIcon {position:absolute;top:170px;left:645px;z-index:500000;}
