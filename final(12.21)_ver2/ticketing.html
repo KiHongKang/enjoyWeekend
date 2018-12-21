@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "utf-8">
+<meta name = "viewport" content = "width = device-width, initial-scale=1.0">
+<title>ticketing</title>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="css\common.css">
+<link rel="stylesheet" type="text/css" href="css\jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="css\ticketing.css">
+<link rel="stylesheet" href="./base/jquery.ui.all.css">
+<!-- js -->
+<script src = "https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script  src="js/ticketing.js"></script>
+
+<!-- 제이쿼리용 -->
+<script>
+  $(function() {
+    $( "#accordion" ).accordion({
+      collapsible: true
+    });
+  });
+  </script>
+
+<script>
+
+  
+
+  </script>
+
+
+<!-- 제이쿼리용 클래스 -->
+  <style type="text/css">
+  .block{
+    display: block;
+  }
+  .none{
+    display: none;
+  }
+  .hidden{
+    visibility: hidden;
+  }
+  </style>
+
+</head>
+<body>
+<header>
+<div id = "header_box">
+<div id = "header_box_li_1">
+	<div id = "header_box_li_1_text">
+	<ul class = "header_ul_1">
+		<li class = "header_li_1"><a href="ticketing.html">Ticket</a></li>
+		<li class = "header_li_1"><a href="event.html">Event</a></li>
+		<li class = "header_li_1" style = "font-weight : bold;"><a href="mypage.html">TicketChange</a></li>
+		<li class = "header_li_1" style = "padding:0px" onclick="lightbox_open()"><a href="#">Login</a></li>
+	</ul>
+	</div>
+</div>
+<div id = "header_box_li_2">
+<div id = "header_box_li_2_left">
+	<a href="index.html"><img src = "images/logo.png" style="width: 80px; height: 70px; "></a>
+</div>
+<div id = "header_box_li_2_right">
+	<ul class = "header_ul_2">
+		<li class = "header_li_2"><a href="ticketing.html">Ticketing</a></li>
+		<li class = "header_li_2"><a href="chart.html">Chart</a></li>
+		<li class = "header_li_2"><a href="lounge.html">Lounge</a></li>
+	</ul>
+</div>
+<div id = "header_box_li_2_right_2"><a href="mypage.html"><img src="images/person.png"></a></div>
+</div>
+</div>
+</header>
+
+
+<main>
+<div id="nav_box">
+
+		<ul id="nav_ul">
+			<li class="nav_li">영화예매</li>
+			<li class="nav_li">예매내역</li>
+			<li class="nav_li">현재상영작</li>
+			<li class="nav_li">개봉예정작</li>
+			<li class="nav_li">극장정보</li>
+			<li class="nav_li">예고편</li>
+		</ul>
+	</div>
+	
+	<!-- 메인 전체화면 -->
+	<div id = "all_box">
+
+	<!-- 첫 번째 블록화면 -->
+		<div id = "main_box">
+			<div id="reservebox">
+				<div class="headerbox">
+					<ul class="headerbox_ul" >
+						<li class="headerbox_li">영화먼저선택</li>
+						<li class="headerbox_li">극장먼저선택</li>
+						<li class="headerbox_li">날짜먼저선택</li>
+					</ul>
+				</div>
+
+<!-- reservebox 안쪽 구성 -->
+        <div id = "content_box">
+          <div id = "row_box_1">
+            <div id = "date"><div id="datepicker"></div></div>
+            <div id = "table">
+              <div class="tab_box">
+          <div id="tabs">
+            <ul>
+              <li><a href="#tabs-1">예매순</a></li>
+              <li><a href="#tabs-2">평점순</a></li>
+              <li><a href="#tabs-3">개봉순</a></li>
+            </ul>
+            <div id="tabs-1">
+            </div>
+            <div id="tabs-2">
+            </div>
+            <div id="tabs-3">
+            </div>
+          </div>           
+        </div>        
+            </div>
+          </div>
+          <!-- 극장선택 -->
+          <div id = "row_box_2">
+            <div class="accordionbox">
+          <div id="off"">
+            <img src="images\reservation\ad.gif" style = "width:450px; height:520px;">
+          </div>
+          <div id="on" class="hidden">
+          <div id="accordion">
+      <h3><p id="change_region" class="catg_big">
+      서울
+    </p></h3>
+  
+
+  <div class="catg_mid">
+                  <table id="seoul">
+                    <tbody>
+                      <tr>
+                        <td id="gangnam">강남구</td>
+                        <td id="gangdong">강동구</td>
+                        <td id="gangbuk">강북구</td>
+                        <td id="gangseo">강서구</td>
+                        <td id="gwanak">관악구</td>
+                      </tr>
+                      <tr>
+                        <td id="gwangjin">광진구</td>
+                        <td id="guro">구로구</td>
+                        <td id="geumcheon">금천구</td>
+                        <td id="nowon">노원구</td>
+                        <td id="dobong">도봉구</td>
+                      </tr>
+                      <tr>
+                        <td id="dongdaemun">동대문구</td>
+                        <td id="dongjak">동작구</td>
+                        <td id="mapo">마포구</td>
+                        <td id="seodaemun">서대문구</td>
+                        <td id="seocho">서초구</td>
+                      </tr>
+                      <tr>
+                        <td id="sungdong">성동구</td>
+                        <td id="sungbuk">성북구</td>
+                        <td id="songpa">송파구</td>
+                        <td id="yangcheon">양천구</td>
+                        <td id="yeongdeumgpo">영등포구</td>
+                      </tr>
+                      <tr>
+                        <td id="yongsan">용산구</td>
+                        <td id="eunpyeong">은평구</td>
+                        <td id="jongro">종로구</td>
+                        <td id="junggu">중구</td>
+                        <td id="jungnang">중랑구</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                    <p id="schedule_gangnam" class="none">
+                      <button>07:00</button>
+                      <button>10:00</button>
+                      <button>13:00</button>
+                      <button>16:00</button>
+                    </p>
+                    <p id="schedule_gangdong" class="none">
+                      <button>08:00</button>
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                    </p>
+                    <p id="schedule_gangbuk" class="none">
+                      <button>09:00</button>
+                      <button>12:00</button>
+                      <button>15:00</button>
+                      <button>18:00</button>
+                    </p>
+                    <p id="schedule_gangseo" class="none">
+                      <button>10:00</button>
+                      <button>13:00</button>
+                      <button>16:00</button>
+                      <button>19:00</button>
+                    </p>
+                    <p id="schedule_gwanak" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_gwangjin" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_guro" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_geumcheon" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_nowon" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_dobong" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_dongdaemun" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_dongjak" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_mapo" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_seodaemun" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_seocho" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_sungdong" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_sungbuk" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_songpa" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_yangcheon" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_yeongdeumgpo" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_yongsan" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_eunpyeong" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_jongro" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_junggu" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_jungnang" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                </div>
+                <h3> <p id="incheon" class="catg_big">인천/경기</p>
+                </h3>
+                <div class="catg_mid">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>가평</td>
+                        <td>고양</td>
+                        <td>과천</td>
+                        <td>광명</td>
+                        <td>광주</td>
+                      </tr>
+                      <tr>
+                        <td>구리</td>
+                        <td>군포</td>
+                        <td>김포</td>
+                        <td>남양주</td>
+                        <td>동두천</td>
+                      </tr>
+                      <tr>
+                        <td>부천</td>
+                        <td>성남</td>
+                        <td>수원</td>
+                        <td>시흥</td>
+                        <td>안산</td>
+                      </tr>
+                      <tr>
+                        <td>안성</td>
+                        <td>안양</td>
+                        <td>양주</td>
+                        <td>양편</td>
+                        <td>여주</td>
+                      </tr>
+                      <tr>
+                        <td>연천</td>
+                        <td>오산</td>
+                        <td>용인</td>
+                        <td>의왕</td>
+                        <td>의정부</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                    <p id="schedule_gapyeong" class="none">
+                      <button>07:00</button>
+                      <button>10:00</button>
+                      <button>13:00</button>
+                      <button>16:00</button>
+                    </p>
+                    <p id="schedule_goyang" class="none">
+                      <button>08:00</button>
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                    </p>
+                    <p id="schedule_gangbuk" class="none">
+                      <button>09:00</button>
+                      <button>12:00</button>
+                      <button>15:00</button>
+                      <button>18:00</button>
+                    </p>
+                    <p id="schedule_gangseo" class="none">
+                      <button>10:00</button>
+                      <button>13:00</button>
+                      <button>16:00</button>
+                      <button>19:00</button>
+                    </p>
+                    <p id="schedule_gwanak" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_gwangjin" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_guro" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_geumcheon" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_nowon" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_dobong" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_dongdaemun" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_dongjak" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_mapo" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_seodaemun" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_seocho" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_sungdong" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_sungbuk" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_songpa" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_yangcheon" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_yeongdeumgpo" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_yongsan" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_eunpyeong" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_jongro" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_junggu" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_jungnang" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                </div>
+  <h3>대전,충청/강원</h3>
+  <div class="catg_mid">
+                  <table id="daejeon">
+                    <tbody>
+                      <tr>
+                        <td id="gangnam">강남구</td>
+                        <td id="gangdong">강동구</td>
+                        <td id="gangbuk">강북구</td>
+                        <td id="gangseo">강서구</td>
+                        <td id="gwanak">관악구</td>
+                      </tr>
+                      <tr>
+                        <td id="gwangjin">광진구</td>
+                        <td id="guro">구로구</td>
+                        <td id="geumcheon">금천구</td>
+                        <td id="nowon">노원구</td>
+                        <td id="dobong">도봉구</td>
+                      </tr>
+                      <tr>
+                        <td id="dongdaemun">동대문구</td>
+                        <td id="dongjak">동작구</td>
+                        <td id="mapo">마포구</td>
+                        <td id="seodaemun">서대문구</td>
+                        <td id="seocho">서초구</td>
+                      </tr>
+                      <tr>
+                        <td id="sungdong">성동구</td>
+                        <td id="sungbuk">성북구</td>
+                        <td id="songpa">송파구</td>
+                        <td id="yangcheon">양천구</td>
+                        <td id="yeongdeumgpo">영등포구</td>
+                      </tr>
+                      <tr>
+                        <td id="yongsan">용산구</td>
+                        <td id="eunpyeong">은평구</td>
+                        <td id="jongro">종로구</td>
+                        <td id="junggu">중구</td>
+                        <td id="jungnang">중랑구</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                    <p id="schedule_gangnam" class="none">
+                      <button>07:00</button>
+                      <button>10:00</button>
+                      <button>13:00</button>
+                      <button>16:00</button>
+                    </p>
+                    <p id="schedule_gangdong" class="none">
+                      <button>08:00</button>
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                    </p>
+                    <p id="schedule_gangbuk" class="none">
+                      <button>09:00</button>
+                      <button>12:00</button>
+                      <button>15:00</button>
+                      <button>18:00</button>
+                    </p>
+                    <p id="schedule_gangseo" class="none">
+                      <button>10:00</button>
+                      <button>13:00</button>
+                      <button>16:00</button>
+                      <button>19:00</button>
+                    </p>
+                    <p id="schedule_gwanak" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_gwangjin" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_guro" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_geumcheon" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_nowon" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_dobong" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_dongdaemun" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_dongjak" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_mapo" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_seodaemun" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_seocho" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_sungdong" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_sungbuk" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_songpa" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_yangcheon" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_yeongdeumgpo" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_yongsan" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_eunpyeong" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_jongro" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_junggu" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_jungnang" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                </div>
+  <h3>부산/경남</h3>
+  <div class="catg_mid">
+                  <table id="seoul">
+                    <tbody>
+                      <tr>
+                        <td id="gangnam">강남구</td>
+                        <td id="gangdong">강동구</td>
+                        <td id="gangbuk">강북구</td>
+                        <td id="gangseo">강서구</td>
+                        <td id="gwanak">관악구</td>
+                      </tr>
+                      <tr>
+                        <td id="gwangjin">광진구</td>
+                        <td id="guro">구로구</td>
+                        <td id="geumcheon">금천구</td>
+                        <td id="nowon">노원구</td>
+                        <td id="dobong">도봉구</td>
+                      </tr>
+                      <tr>
+                        <td id="dongdaemun">동대문구</td>
+                        <td id="dongjak">동작구</td>
+                        <td id="mapo">마포구</td>
+                        <td id="seodaemun">서대문구</td>
+                        <td id="seocho">서초구</td>
+                      </tr>
+                      <tr>
+                        <td id="sungdong">성동구</td>
+                        <td id="sungbuk">성북구</td>
+                        <td id="songpa">송파구</td>
+                        <td id="yangcheon">양천구</td>
+                        <td id="yeongdeumgpo">영등포구</td>
+                      </tr>
+                      <tr>
+                        <td id="yongsan">용산구</td>
+                        <td id="eunpyeong">은평구</td>
+                        <td id="jongro">종로구</td>
+                        <td id="junggu">중구</td>
+                        <td id="jungnang">중랑구</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                    <p id="schedule_gangnam" class="none">
+                      <button>07:00</button>
+                      <button>10:00</button>
+                      <button>13:00</button>
+                      <button>16:00</button>
+                    </p>
+                    <p id="schedule_gangdong" class="none">
+                      <button>08:00</button>
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                    </p>
+                    <p id="schedule_gangbuk" class="none">
+                      <button>09:00</button>
+                      <button>12:00</button>
+                      <button>15:00</button>
+                      <button>18:00</button>
+                    </p>
+                    <p id="schedule_gangseo" class="none">
+                      <button>10:00</button>
+                      <button>13:00</button>
+                      <button>16:00</button>
+                      <button>19:00</button>
+                    </p>
+                    <p id="schedule_gwanak" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_gwangjin" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_guro" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_geumcheon" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_nowon" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_dobong" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_dongdaemun" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_dongjak" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_mapo" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_seodaemun" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_seocho" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_sungdong" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_sungbuk" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_songpa" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_yangcheon" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_yeongdeumgpo" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_yongsan" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_eunpyeong" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_jongro" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_junggu" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                    <p id="schedule_jungnang" class="none">
+                      <button>11:00</button>
+                      <button>14:00</button>
+                      <button>17:00</button>
+                      <button>20:00</button>
+                    </p>
+                </div>
+</div>
+
+
+          </div>
+          </div>
+          </div>
+          <!-- 우측화면 -->
+          <div id = "row_box_3">
+            
+            <div id = "img"><img src = "https://images.maxmovie.com/movie_info/image/2018/01/M000105433/poster/Max2018DRUGKING2.jpg" style = "width:200px; height:200px;"></div>
+            <div id = "star">★★★★★</div>
+            <div id = "data">
+            <div class = "txt">
+              <div class = "txt_label">영화</div>
+              <div id = "txt_1"></div>
+            </div>
+            <div class = "txt">
+              <div class = "txt_label">지역</div>
+               <div id = "txt_2"></div>
+            </div>
+            <div class = "txt">
+              <div class = "txt_label">시간</div>
+               <div id = "txt_3"></div><div id = "txt_3_1"></div>
+            </div>
+            <div class = "txt">
+              <div class = "txt_label">인원</div>
+               <div id = "txt_4">1명</div>
+            </div>
+            <div class = "txt">
+              <div class = "txt_label">할인</div>
+               <div id = "txt_5">0원</div>
+            </div>
+            </div>
+            <div id = "price"><ul style = "float : right; padding-right: 20px; font-weight: bold; font-size: 15px;">0원</ul></div>
+            <div id = "next"><span style = "width:120px; height: 45px;line-height: 0;">NEXT</span></div>
+
+
+          </div>
+
+        </div>
+
+
+
+			</div>
+		</div>
+	</div>
+</main>
+<footer>
+<div id = "footer_box">
+<div id = "footer_box_li_1">
+	<div class="footin_1">
+		<ul class="footlink">
+			<li><a href="index.html">회사소개</a></li>
+			<li><a href="index.html">이용약관</a></li>
+			<li><a href="index.html">개인정보 처리방침</a></li>
+			<li><a href="index.html">청소년보호정책 (책임자: 김그린)</a></li>
+			<li><a href="index.html">예매권 구매문의</a></li>
+			<li><a href="index.html">광고안내</a></li>
+			<li><a href="index.html">할인정보</a></li>
+			<li><a href="sitemap.html"><b>사이트맵</b></a></li>
+			<li><a href="index.html">고객센터</a></li>
+		</ul>
+	</div>
+</div>
+<div id = "footer_box_li_2">
+		<div class="footin_2">
+	
+		<ul class="address">
+			<li>사업자등록번호 123-45-67890</li>
+			<li>통신판매업 신고번호 제2018-서울강남-00000호</li>
+			<li>대표이사 김그린</li><br/>
+		</ul>
+		<ul class="address2" style="padding-top:0px;">
+			<li>그린컴그룹㈜</li>
+			<li>서울특별시 강남구 강남대로 98길, 4층 (역삼동, 플라타너스빌딩)</li>	
+			<li>고객센터 1111-1111 (운영시간 09:00~18:00)</li><br/>
+		</ul>
+	    <p class="cptime" style="padding-top:10px;">인터넷신문등록번호 서울 가 11111 | 등록일자 2018년 12월 21일 | 무비무비닷컴 | 발행인, 편집인 : 김그린</p><br/>
+		<p class="copy">Copyright ⓒ Green Group Inc. All rights reserved.</p>
+		<p class="fclean"><a href="https://www.copyrightok.kr/" target="_blank"><img src="//images.maxmovie.com/images/web/2016_new/images/main/clean_site.png" alt="CLEAN SITE"></a></p>
+	</div>
+</div>
+
+
+</div>
+</footer>
+
+<!-- 로그인팝업시 뒷배경 처리 -->
+<div id="block"></div>
+
+<!-- 로그인 팝업창 시작 -->
+	<div id="maxMemberLoginPopup">
+		<div class="nllayerin" style="left: 40%; top: 50%; margin-top: -198px; margin-left: -100px;">
+			<h3 class="ptit"><img src="images\login\btn_login_tit1.png" alt="로그인"></h3>
+			<div class="nllaytxt">
+				<p class="nlltit">Welcome to Cinema Movie</p>
+				<div class="logfl">
+					<div class="logflbox">
+						<ul class="flogin">
+							<li><input type="text" name="txtMaxLoginId" placeholder="아이디" style="width:254px"></li>
+							<li><input type="password" name="txtMaxLoginPw" placeholder="비밀번호" style="width:254px"></li>
+						</ul>                   
+						<p class="pt10 lh pb20"><a href="#" class="btnMaxLogin"><img src="images\login\btn_nologin.png" alt="로그인"></a></p>
+						<ul class="floglink">                       
+							<li><a href="registeration.html" target="MaxID">회원가입</a></li>
+							<li><a href="findID.html" target="MaxID">아이디</a>/
+							<a href="findPW.html" target="MaxID">비밀번호찾기</a>
+							</li>                   
+						</ul>               
+					</div>           
+				</div>           
+			</div>       
+			<p class="pcl"><a href="#" id="btnMaxLoginClose"><img src="images\login\btn_popup_close.png" alt="레이어 닫기"   onclick="lightbox_close()"></a></p>   
+		</div>
+	</div>
+<script type="text/javascript">
+	// 초기화
+	var lightbox = document.querySelector('#maxMemberLoginPopup');
+	var block = document.querySelector('#block'); 
+
+  // 라이트 박스 표시
+  function lightbox_open(){
+  	lightbox.setAttribute('class', 'player');
+  	block.setAttribute('class', 'player');
+  }
+  function lightbox_close(){
+  	lightbox.setAttribute('class', '');
+  	block.setAttribute('class', '');
+  }
+
+</script>
+</body>
+</html>
